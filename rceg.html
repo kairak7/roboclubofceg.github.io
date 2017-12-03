@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+
+<style>
+body {margin:0}
+
+.icon-bar {
+    width: 90px;
+	height: 700px;
+    background-color: black;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: brown;
+    font-size: 36px;
+}
+
+.bagr{
+	background-image: url('images/bird1.jpg');
+
+	/* Full height */
+    height: 10%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 160px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.column {
+  float: left;
+  width: 25%;
+  margin-bottom: 16px;
+  padding: 0 46px;
+}
+
+@media (max-width: 400px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.container {
+  padding: 0 25px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+
+<body>
+
+<div class="bagr">
+	<div class="icon-bar">
+	  <a href="#home"><i class="fa fa-home"></i></a> 
+	  <a href="#about"><i class="fa fa-info-circle"></i></a> 
+	  <a href="#gallery"><i class="fa fa-picture-o"></i></a> 
+	  <a href="#projects"><i class="fa fa-hand-spock-o"></i></a>
+	  <a href="#achievements"><i class="fa fa-trophy"></i></a>
+      <a href="#tutorials"><i class="fa fa-sticky-note"></i></a>	  
+	  <a href="#contact"><i class="fa fa-phone"></i></a> 
+	</div>	
+</div>
+
+<!-- <div id="home" style="background-image: url('images/bird1.jpg'); height:700px">
+</div> -->
+	
+<div id="about" style="background-image: url('images/grey.jpg'); height:1000px">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1 class="w3-container w3-content w3-center w3-justify"><font color="white"> ABOUT US! </h1>
+	<marquee direction="down" behavior="slide">
+	<p class="w3-container w3-content w3-center w3-justify"><font size="6" face="times new roman" color="brown"> 
+	    Robotics club of CEG is a student organization estabilished in 2007 <br> 
+		by our alumni which aims to bridge the gap between academic and <br>
+		practical knowledge, by familiarizing students in the field of robotics <br>
+		and guiding them on various projects undertaken during their course of study. </font></p>
+	<br>
+	<br>
+	<p class="w3-container w3-content w3-center w3-justify"><font size="6" face="times new roman" color="brown"> 
+	    The club works towards nurturing the technical minds of our college <br>
+		by providing a dias for them to showcase their talents. The skills <br>
+		acquired by the students help them to be industry ready and improve <br>
+		their prospects of employability. </p>
+	</marquee>
+</div>
+
+<div id="gallery" style="background-color: skyblue; height:1000px">
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="slide-show container">
+		<div class="mySlides fade">
+			<center><img src="images\3.png" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\LF2.png" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\maxresdefault.jpg" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\Capture.png" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\20160312_173004.jpg" style="width:20%; height:100%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\4.png" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\imageedit_11_4312892440.jpg" style="width:70%"></center>
+		</div>
+	</div>
+	<br>
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+	
+</div>
+
+<div id="projects" style="background-image: url('images/brown.jpg'); background-size:100% 100%">
+	<br>
+	<br>
+	<div class="row">
+		<div class="column">
+			<a href="biped.htm" target="_blank">
+			<img src = "images\biped.png" style="border:5px solid black"></a>	
+			<h2><font color="black" face="times new roman">    BIPED </font></h2>
+		</div>
+		<div class="column">
+			<a href="biped.htm">
+			<img src = "images\xyplotter.png" style="border:5px solid black"></a>	
+			<h2><font color="black" face="times new roman"> 2D PRINTER </font></h2>
+		</div>
+		<div class="column">
+			<a href="biped.htm">
+			<img src = "images\chess.png" style="border:5px solid black"></a>
+			<h2><font color="black" face="times new roman"> CHESS PLAYING <br> ROBOT</font></h2>
+		</div>
+	
+		<div class="column">
+			<a href="biped.htm">
+			<img src = "images\pov.png" style="border:5px solid black"></a>
+			<h2><font color="black" face="times new roman"> POV using IoT </font></h2>
+		</div>
+		
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+
+<div id="tutorials" style="background-image: url('images/gear.jpg'); height:1000px">
+		<div class="row">
+			<div class="column">
+				<br>
+				<br>
+				<br>
+				<br>
+				<a href="https://www.youtube.com/watch?v=DFP-iZzs6kU" target="_blank">
+				<img src = "images\wcb1.jpg" style="border:5px solid black;width:200px"></a>
+				<h2><font color="white" face="times new roman"> WIRED CONTROLLED ROBOT </font></h2>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+</div>
+
+<div id="contact" style="background-image: url('images/8-1.jpg'); height:1000px">
+	<div class="row">
+		<div class="column">
+			<br>
+			<img src="images\d.jpg">
+			<h2>Jane Doe</h2>
+			<h3>CEO & Founder</h3>
+			<h3>example@example.com</h3>
+		</div>
+
+		<div class="column">
+			<br>
+			<img src="images\S.jpg">
+			<h2>Mike Ross</h2>
+			<h3>Art Director</h3>
+			<h3>example@example.com</h3>
+		</div>
+		<div class="column">
+			<br>
+		    <img src="images\vk.jpg">
+		    <h2>John Doe</h2>
+		    <h3>Designer</h3>
+		    <h3>example@example.com</h3>
+		</div>
+
+		<!-- <div class="column">
+			<br>
+			<img src="E:\rceg\roboclubofceg.github.io\docs\images\imageedit_13_8390427425 - Copy.jpg">
+			<h2>Krithika Kalahasti</h2>
+			<h3>Projects Director</h3>
+			<h3>kittykirth7@gmail.com</h3>
+			</div>
+		</div> -->
+    </div> 
+</div>	
+
+<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		for (i = 0; i < slides.length; i++) {
+		   slides[i].style.display = "none";  
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides, 2000); // Change image every 2 seconds
+	}
+</script>
+
+
+</body>
+</html> 

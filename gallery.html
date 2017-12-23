@@ -34,7 +34,6 @@ body {margin:0}
     transition: all 0.3s ease;
     color: brown;
     font-size: 36px;
-	position: fixed;
 }
 
 .bagr{
@@ -143,20 +142,68 @@ img:hover {
 
 <body>
 
-<div class="bagr">
-	<div class="icon-bar">
-	  <a href="rceg.html"><i class="fa fa-home"></i></a> 
-	  <a href="about.html"><i class="fa fa-info-circle"></i></a> 
-	  <a href="gallery.html"><i class="fa fa-picture-o"></i></a> 
-	  <a href="projects.html"><i class="fa fa-hand-spock-o"></i></a>
-	  <a href="achievements.html"><i class="fa fa-trophy"></i></a>
-      <a href="tutorials.html"><i class="fa fa-sticky-note"></i></a>	  
-	  <a href="contact.html"><i class="fa fa-phone"></i></a> 
-	</div>	
+<div style="background-color: skyblue; background-size:100% 100%">	
+    <br>
+	<br>
+	<br>
+	<br>
+	<div class="slide-show container">
+		<div class="mySlides fade">
+			<center><img src="images\3.jpg" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\LF2.jpg" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\maxresdefault.jpg" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\Capture.jpg" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\20160312_173004.jpg" style="width:20%; height:100%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\4.jpg" style="width:70%"></center>
+		</div>
+		<div class="mySlides fade">
+			<center><img src="images\imageedit_11_4312892440.jpg" style="width:70%"></center>
+		</div>
+	</div>
+	<br>
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+	
 </div>
 
-<!-- <div id="home" style="background-image: url('images/bird1.jpg');">
-</div> -->
+<script>
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		for (i = 0; i < slides.length; i++) {
+		   slides[i].style.display = "none";  
+		}
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides, 2000); // Change image every 2 seconds
+	}
+</script>
 
 </body>
-</html> 
+</html>

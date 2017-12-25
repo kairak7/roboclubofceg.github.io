@@ -67,76 +67,8 @@ img:hover {
     box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
-.column {
-  float: left;
-  width: 25%;
-  margin-bottom: 16px;
-  padding: 0 46px;
-}
 
-@media (max-width: 400px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
 
-.container {
-  padding: 0 25px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.mySlides {display:none}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
 </style>
 
 <body>
@@ -150,11 +82,73 @@ img:hover {
 	  <a href="achievements.html"><i class="fa fa-trophy"></i></a>
       <a href="tutorials.html"><i class="fa fa-sticky-note"></i></a>	  
 	  <a href="contact.html"><i class="fa fa-phone"></i></a> 
-	</div>	
+	</div>
+	<h1>
+	  <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+		<span class="wrap"></span>
+	  </a>
+	</h1>
 </div>
 
 <!-- <div id="home" style="background-image: url('images/bird1.jpg');">
 </div> -->
+<script>
+	var TxtType = function(el, toRotate, period) {
+			this.toRotate = toRotate;
+			this.el = el;
+			this.loopNum = 0;
+			this.period = parseInt(period, 10) || 2000;
+			this.txt = '';
+			this.tick();
+			this.isDeleting = false;
+		};
 
+		TxtType.prototype.tick = function() {
+			var i = this.loopNum % this.toRotate.length;
+			var fullTxt = this.toRotate[i];
+
+			if (this.isDeleting) {
+			this.txt = fullTxt.substring(0, this.txt.length - 1);
+			} else {
+			this.txt = fullTxt.substring(0, this.txt.length + 1);
+			}
+
+			this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+			var that = this;
+			var delta = 200 - Math.random() * 100;
+
+			if (this.isDeleting) { delta /= 2; }
+
+			if (!this.isDeleting && this.txt === fullTxt) {
+			delta = this.period;
+			this.isDeleting = true;
+			} else if (this.isDeleting && this.txt === '') {
+			this.isDeleting = false;
+			this.loopNum++;
+			delta = 500;
+			}
+
+			setTimeout(function() {
+			that.tick();
+			}, delta);
+		};
+
+		window.onload = function() {
+			var elements = document.getElementsByClassName('typewrite');
+			for (var i=0; i<elements.length; i++) {
+				var toRotate = elements[i].getAttribute('data-type');
+				var period = elements[i].getAttribute('data-period');
+				if (toRotate) {
+				  new TxtType(elements[i], JSON.parse(toRotate), period);
+				}
+			}
+			// INJECT CSS
+			var css = document.createElement("style");
+			css.type = "text/css";
+			css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+			document.body.appendChild(css);
+		};
+</script>
 </body>
 </html> 

@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/styles.min.css">
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 200px;
+}
+
+</style>
+
+<body>
+
+<div style="background-image:url('images/brown.jpg');height:100% 100%">
+	<br>
+	<br>
+	<h1 class="w3-container w3-content w3-center w3-justify"><font color="white"> Persistence of Vision </h1>
+	<p class="w3-container w3-content w3-center w3-justify"><font size="6" face="times new roman" color="white"> 
+	    Persistence Of Vision is the phenomenon of the eye by which an image seen by our eye persists <br>
+		for about 0.04s during which any other images that we see are merged together with this image. <br>
+		This ability can be used to create an illusion of images/characters floating in the air, by <br>
+		rapidly flashing a column of LEDs while moving the display in air. <br>
+		Thus to make the display we have to do the following <br>
+		1. Design a circuitry to control the flashing of LEDs in a LED column. <br>
+		2. Program the circuit to flash in an appropriate pattern. <br>
+		3. Synchronize the flashing with the motion of the display. <br>
+		Pov is accomplished with the following: <br>
+		•	500 rpm high torque motor <br>
+		•	NodeMcu <br>
+		•	LEDS-12 <br>
+		•	200 ohm resistors <br>
+		•	7 amps battery <br>
+		Firstly, POV is constructed on a rectangular mica sheet. Due to the connection uneasiness. <br>
+		Then we switched on to a circular mica sheet.The crank and the circular sheet are bolted together. <br>
+		12 LEDs are soldered with resistors on the dot board.The arduino,the battery and the dot board <br>
+		with LEDS were placed in such a manner the weight is equally distributed.The biggest problem <br>
+		was the making of the hardware setup as the whole system had to be a light weight, evenly <br>
+		balanced and yet a strong one. Even slight variation of centre of mass from the axle resulted <br>
+		in large scale wobbling of the system. Here the distribution of weight tested our patience. <br>
+		We went through number of trial and errors to get fine display. Then we displayed more other <br>
+		names to check each character display.Next we switched to NODEMCU for memory expansion and wifi program. <br>
+		We used thingspeak.com for generating API of cricket score from espn website. <br>
+		ThingSpeak is an open source “Internet of Things” application and API to store and retrieve <br>
+		data from things using HTTP over the Internet or via a Local Area Network. <br>
+		After generating api using thingspeak.com we used node mcu to retrieve the data from the espn <br>
+		link and the data was displayed using pov. <br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+	</font></p>
+	<h1 class="w3-container w3-content w3-center w3-justify"><font color="white"> Analog Clock Display using Persistence of Vision </h1>
+	<p class="w3-container w3-content w3-center w3-justify"><font size="6" face="times new roman" color="white">
+	After the completion of each second known using millis function second hand is shifted. Likewise minutes hand <br>
+	is shifted. Millis function returns the number of milliseconds since the NODEMCU board began running the current <br>
+	program. This number will overflow (go back to zero), after approximately 50 days.Then we displayed the number 12. <br>
+	Thus the final pov clock consisted of an outer green rim with 12 as reference. <br>
+	</font></p>
+	<br>
+	<br>
+</div>
+
+<body>
+</html>
